@@ -1,0 +1,24 @@
+---
+import SlashSvg from "../assets/svg/slash.svg"
+import { SITE_INFO } from '../constants/Info.ts';
+import ArrowRightSvg from "../assets/svg/arrowRight.svg"
+---
+<header class="sticky text-base top-0 z-50 bg-slate-950/90 blackdrop-blur-md p-4
+flex justify-between items-center border-b border-b-white rounded-b-xl text-gray-400">
+    <a href="/" class="text-base flex md:gap-2 font-black uppercase">
+        <SlashSvg class="size-5"/>
+        {SITE_INFO.shortName}
+    </a>
+
+    <ul class="hidden md:flex gap-5 uppercase">
+        <a href="#about" class="destacar">01·Sobre Mí</a>
+        <a href="#skills" class="destacar">02·Skills</a>
+        <a href="#projects" class="destacar">03·Proyectos</a>
+        <a href="#contact" class="destacar">04·Certificados</a>
+        <a href="#contact" class="destacar">05·Contacto</a>
+    </ul>
+
+    <a href={SITE_INFO.whatsapp}class="destacar flex justify-center items-center" target="_blank" rel="noopener noreferrer">
+        Hablemos <ArrowRightSvg class="size-4"/>
+    </a>
+</header>

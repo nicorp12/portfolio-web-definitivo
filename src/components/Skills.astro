@@ -1,0 +1,108 @@
+<section
+    class="border-t border-t-slate-200 pt-4 grid grid-cols-1 md:grid-cols-3 gap-4"
+>
+    <div class="mx-4 text-balance space-y-3">
+        <h2 class="uppercase text-base text-center md:text-start md:text-lg">
+            02 · Skills
+        </h2>
+        <p class="text-base text-center md:text-start md:text-lg">
+            Herramientas que uso para desarrollar de punta a punta.
+            <br />
+            Habilidades blandas.
+        </p>
+    </div>
+
+    <div
+        id="skill-carousel"
+        class="flex overflow-x-auto snap-x snap-mandatory text-slate-200 mx-4 leading-relaxed text-balance text-sm md:col-span-2 md:grid md:grid-cols-5 md:overflow-visible border-slate-700 border-2 bg-slate-900 p-2 md:justify-center text-center rounded-2xl"
+    >
+        <div
+            class="md:border-r border-slate border-slate-700 min-w-full snap-center md:min-w-0"
+        >
+            <h1 class="border-b border-slate-700">FrontEnd</h1>
+            <p class="px-2 pt-2 text-start">
+                · HTML / CSS <br />
+                · JavaScript <br />
+                · TypeScript <br />
+                · Astro <br />
+                · React <br />
+                · Vue.js <br />
+                · Ionic / Móvil <br />
+                · Tailwind CSS
+            </p>
+        </div>
+
+        <div
+            class="md:border-r border-slate border-slate-700 min-w-full snap-center md:min-w-0"
+        >
+            <h1 class="border-b border-slate-700">BackEnd</h1>
+            <p class="px-2 pt-2 text-start">
+                · Node.js <br />
+                · TypeScript <br />
+                · APIs RESTful <br />
+                · Autenticación <br />
+                · Lógica de Servidor
+            </p>
+        </div>
+
+        <div
+            class="md:border-r border-slate border-slate-700 min-w-full snap-center md:min-w-0"
+        >
+            <h1 class="border-b border-slate-700">Base de Datos</h1>
+            <p class="px-2 pt-2 text-start">
+                · Supabase <br />
+                · SQL / PostgreSQL <br />
+                · Modelado de Datos <br />
+                · Consultas y Joins <br />
+                · Análisis de Datos
+            </p>
+        </div>
+
+        <div
+            class="md:border-r border-slate-700 min-w-full snap-center md:min-w-0"
+        >
+            <h1 class="border-b border-slate-700">Nube</h1>
+            <p class="px-2 pt-2 text-start">
+                · Vercel <br />
+                · Netlify <br />
+                · DigitalOcean <br />
+                · Git & GitHub <br />
+                · Despliegue Web <br />
+                · Variables de Entorno <br />
+                · Control de Versiones
+            </p>
+        </div>
+
+        <div class="min-w-full snap-center md:min-w-0">
+            <h1 class="border-b border-slate-700">Habilidades Blandas</h1>
+            <p class="px-2 pt-2 text-start">
+                · Resolución de problemas <br />
+                · Trabajo en equipo <br />
+                · Adaptabilidad <br />
+                · Comunicación <br />
+                · Aprendizaje autónomo
+            </p>
+        </div>
+    </div>
+    <div id="skills-dots" class="flex justify-center gap-2 md:hidden">
+        <span class="size-2 rounded-full bg-cyan-400"></span>
+        <span class="size-2 rounded-full bg-slate-600"></span>
+        <span class="size-2 rounded-full bg-slate-600"></span>
+        <span class="size-2 rounded-full bg-slate-600"></span>
+        <span class="size-2 rounded-full bg-slate-600"></span>
+    </div>
+</section>
+
+<script>
+    const carousel = document.getElementById("skill-carousel")
+    const dots = document.querySelectorAll<HTMLElement>("#skills-dots span")
+
+    carousel?.addEventListener("scroll", () => {
+        const index = Math.round(carousel.scrollLeft / carousel.clientWidth);
+
+        dots.forEach((dot, i) => {
+            dot.classList?.toggle("bg-cyan-400", i === index)
+            dot.classList?.toggle("bg-slate-600", i !== index)
+        })
+    })
+</script>

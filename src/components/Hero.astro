@@ -1,0 +1,129 @@
+---
+import { SITE_INFO } from "../constants/Info.ts";
+import img1 from "../assets/img/me/img1.jpeg";
+import img2 from "../assets/img/me/img2.jpeg";
+import img3 from "../assets/img/me/img3.jpeg";
+import img4 from "../assets/img/me/img4.jpeg";
+import img5 from "../assets/img/me/img5.jpeg";
+import img6 from "../assets/img/me/img6.jpeg";
+
+import ArrowRightSvg from "../assets/svg/arrowRight.svg";
+---
+
+<section class="mx-2 md:mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center my-8 md:my-16">
+    <div class="space-y-4 text-balance">
+        <p class="text-cyan-400 uppercase text-sm">
+            Portfolio · {SITE_INFO.currentYear}
+        </p>
+        <h1 class="text-white text-4xl md:text-5xl font-black">{SITE_INFO.fullName}</h1>
+        <h2 class="text-blue-400 text-lg md:text-xl italic font-bold">
+            {SITE_INFO.role1} {SITE_INFO.level1} & <p>{SITE_INFO.role2} {SITE_INFO.level2}</p>
+        </h2>
+        <p class="text-slate-400 text-sm md:text-base font-medium">
+            Analista Programador Computacional titulado en Duoc UC. Desarrollo
+            aplicaciones web y móviles robustas, abarcando desde interfaces
+            cuidadas hasta la lógica de backend, bases de datos y despliegue en
+            la nube.
+        </p>
+
+        <ul class="flex justify-start items-center gap-4">
+            <a
+                href=""
+                class="text-xs md:text-base flex items-center border-2 border-cyan-400 p-2 rounded-lg hover:scale-105 transition-transform hover:bg-cyan-900 text-slate-200"
+                >Ver Proyectos<ArrowRightSvg class="text-white size-3 md:size-5" />
+            </a>
+            <a
+                href=""
+                class="text-xs md:text-base flex items-center border-2 border-cyan-400 p-2 rounded-lg hover:scale-105 transition-transform hover:bg-cyan-900 text-slate-200"
+                >Contactame<ArrowRightSvg class="text-white size-3 md:size-5" />
+            </a>
+        </ul>
+    </div>
+
+    <div
+        class="relative h-48 w-48 md:h-96 md:w-96 mx-auto rounded-xl overflow-hidden border-2 border-yellow-500 hover:scale-105 transition-transform"
+    >
+        <img
+            src={img1.src}
+            alt="Imagen de perfil"
+            class="absolute inset-0 w-full h-full object-cover img-slide img-1"
+        />
+        <img
+            src={img2.src}
+            alt="Imagen de perfil"
+            class="absolute inset-0 w-full h-full object-cover img-slide img-2"
+        />
+        <img
+            src={img3.src}
+            alt="Imagen de perfil"
+            class="absolute inset-0 w-full h-full object-cover img-slide img-3"
+        />
+        <img
+            src={img4.src}
+            alt="Imagen de perfil"
+            class="absolute inset-0 w-full h-full object-cover img-slide img-4"
+        />
+        <img
+            src={img5.src}
+            alt="Imagen de perfil"
+            class="absolute inset-0 w-full h-full object-cover img-slide img-5"
+        />
+        <img
+            src={img6.src}
+            alt="Imagen de perfil"
+            class="absolute inset-0 w-full h-full object-cover img-slide img-6"
+        />
+    </div>
+</section>
+
+<style>
+    .img-slide {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        /* Duración total de 24 segundos (4s por cada una) */
+        animation: crossfade 24s infinite ease-in-out;
+    }
+
+    /* Escalonamos el inicio de cada imagen */
+    .img-1 {
+        animation-delay: 0s;
+    }
+    .img-2 {
+        animation-delay: 4s;
+    }
+    .img-3 {
+        animation-delay: 8s;
+    }
+    .img-4 {
+        animation-delay: 12s;
+    }
+    .img-5 {
+        animation-delay: 16s;
+    }
+    .img-6 {
+        animation-delay: 20s;
+    }
+
+    /* Una sola animación universal de desvanecimiento suave */
+    @keyframes crossfade {
+        0% {
+            opacity: 0;
+        }
+        5% {
+            opacity: 1;
+        } /* Entra suavemente */
+        17% {
+            opacity: 1;
+        } /* Se mantiene visible */
+        22% {
+            opacity: 0;
+        } /* Sale suavemente */
+        100% {
+            opacity: 0;
+        }
+    }
+</style>
