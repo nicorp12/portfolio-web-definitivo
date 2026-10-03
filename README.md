@@ -2,7 +2,7 @@
 
 Sitio web personal para mostrar mis proyectos, habilidades y certificados como **Desarrollador Full Stack Junior**. Diseño oscuro, responsive y construido con Astro y Tailwind CSS.
 
-🔗 **Demo:** [tu-portafolio.netlify.app](https://tu-portafolio.netlify.app)
+🔗 **Demo:** [tu-portafolio.netlify.app]([https://portfolio-web-nico-rozas-dev.netlify.app/])
 
 ---
 
