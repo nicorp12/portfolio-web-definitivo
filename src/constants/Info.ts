@@ -6,8 +6,10 @@ export const SITE_INFO = {
     level1: "Junior",
     role2: "Data Analyst",
     level2: "Junior",
-    description: "",
+    description: "Portafolio de Nicolás Rozas, Analista Programador Computacional. Desarrollo aplicaciones web y móviles con Astro, React, Node.js y Supabase.",
+    url: "https://portfolio-web-nico-rozas-dev.netlify.app",
     whatsapp: "https://wa.me/+56976987925",
     currentYear: new Date().getFullYear(),
-    location: "Santiago, Chile"
+    location: "Santiago, Chile",
+    ogImage: "/og-image.webp",
 }
